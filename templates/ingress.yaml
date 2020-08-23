@@ -1,6 +1,7 @@
 {{- if .Values.ingress.enabled -}}
 {{- $fullName := include "squid.fullname" . -}}
 {{- $ingressPath := .Values.ingress.path -}}
+{{- $servicePort := .Values.service.port -}}
 {{- if (semverCompare ">=1.14-0" (substr 1 -1 .Capabilities.KubeVersion.GitVersion)) }}
 apiVersion: networking.k8s.io/v1beta1
 {{- else }}
@@ -37,6 +38,6 @@ spec:
           - path: {{ $ingressPath }}
             backend:
               serviceName: {{ $fullName }}
-              servicePort: {{ .Values.service.port }}
+              servicePort: {{ $servicePort }}
   {{- end }}
 {{- end }}
