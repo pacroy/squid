@@ -23,9 +23,9 @@ spec:
 {{- end }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: http
+      targetPort: 3128
       protocol: TCP
-      name: http
+      name: squid
 {{- if .Values.metrics.enabled }}
     - port: {{ .Values.metrics.exporter.port }}
       targetPort: metrics
