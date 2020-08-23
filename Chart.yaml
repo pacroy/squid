@@ -3,12 +3,12 @@ appVersion: "v0.1.0"
 description: A Helm chart for Kubernetes
 name: squid
 version: 0.2.3
-home: https://github.com/honestica/lifen-charts
+home: https://github.com/pacroy/squid
 keywords:
 - squid
 - proxy
 maintainers:
-- email: matthieu.paret@lifen.fr
-  name: mtparet
+- email: pacroy@gmail.com
+  name: Par
 sources:
 - https://github.com/squid-cache/squid
