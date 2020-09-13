@@ -13,5 +13,5 @@ helm install <release_name> . --namespace=<namespace> --values values.yaml
 ```sh
 helm repo add pacroy https://pacroy.github.io/helm-repo/
 helm repo update
-helm install <release_name> pacroy/bookstack --namespace=<namespace> --values values.yaml
+helm install <release_name> pacroy/squid --namespace=<namespace> --values values.yaml
 ```
