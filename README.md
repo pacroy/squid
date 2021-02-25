@@ -5,13 +5,15 @@ _based on [lifen-charts/squid](https://github.com/honestica/lifen-charts/tree/ma
 ## Local Installation
 
 ```sh
-helm install <release_name> . --namespace=<namespace> --values values.yaml
+kubectl create namespace sunday
+helm upgrade --install <release_name> . --namespace=<namespace> --values values.yaml
 ```
 
 ## Installation from Repository
 
 ```sh
+kubectl create namespace sunday
 helm repo add pacroy https://pacroy.github.io/helm-repo/
 helm repo update
-helm install <release_name> pacroy/squid --namespace=<namespace> --values values.yaml
+helm upgrade --install <release_name> pacroy/squid --namespace=<namespace> --values values.yaml
 ```
